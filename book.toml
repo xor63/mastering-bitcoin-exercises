@@ -1,0 +1,5 @@
+[book]
+authors = ["mikong"]
+multilingual = false
+src = "src"
+title = "Mastering Bitcoin Exercises"
