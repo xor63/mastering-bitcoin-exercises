@@ -75,7 +75,7 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+            <ol class="chapter"><li><a href="ch01-introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="ch02-how-bitcoin-works.html"><strong aria-hidden="true">2.</strong> How Bitcoin Works</a></li><li><a href="ch03-bitcoin-core-the-reference-implementation.html"><strong aria-hidden="true">3.</strong> Bitcoin Core: The Reference Implementation</a></li><li><a href="ch04-keys-addresses.html"><strong aria-hidden="true">4.</strong> Keys, Addresses</a></li><li><a href="ch05-wallets.html"><strong aria-hidden="true">5.</strong> Wallets</a></li><li><a href="ch06-transactions.html"><strong aria-hidden="true">6.</strong> Transactions</a></li><li><a href="ch07-advanced-transactions-and-scripting.html"><strong aria-hidden="true">7.</strong> Advanced Transactions and Scripting</a></li><li><a href="ch08-the-bitcoin-network.html"><strong aria-hidden="true">8.</strong> The Bitcoin Network</a></li><li><a href="ch09-the-blockchain.html"><strong aria-hidden="true">9.</strong> The Blockchain</a></li><li><a href="ch10-mining-and-consensus.html"><strong aria-hidden="true">10.</strong> Mining and Consensus</a></li><li><a href="ch11-bitcoin-security.html"><strong aria-hidden="true">11.</strong> Bitcoin Security</a></li><li><a href="ch12-blockchain-applications.html"><strong aria-hidden="true">12.</strong> Blockchain Applications</a></li></ol>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
@@ -140,7 +140,18 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#chapter-1" id="chapter-1"><h1>Chapter 1</h1></a>
+                        <a class="header" href="#1-introduction" id="1-introduction"><h1>1. Introduction</h1></a>
+<a class="header" href="#2-how-bitcoin-works" id="2-how-bitcoin-works"><h1>2. How Bitcoin Works</h1></a>
+<a class="header" href="#3-bitcoin-core-the-reference-implementation" id="3-bitcoin-core-the-reference-implementation"><h1>3. Bitcoin Core: The Reference Implementation</h1></a>
+<a class="header" href="#4-keys-addresses" id="4-keys-addresses"><h1>4. Keys, Addresses</h1></a>
+<a class="header" href="#5-wallets" id="5-wallets"><h1>5. Wallets</h1></a>
+<a class="header" href="#6-transactions" id="6-transactions"><h1>6. Transactions</h1></a>
+<a class="header" href="#7-advanced-transactions-and-scripting" id="7-advanced-transactions-and-scripting"><h1>7. Advanced Transactions and Scripting</h1></a>
+<a class="header" href="#8-the-bitcoin-network" id="8-the-bitcoin-network"><h1>8. The Bitcoin Network</h1></a>
+<a class="header" href="#9-the-blockchain" id="9-the-blockchain"><h1>9. The Blockchain</h1></a>
+<a class="header" href="#10-mining-and-consensus" id="10-mining-and-consensus"><h1>10. Mining and Consensus</h1></a>
+<a class="header" href="#11-bitcoin-security" id="11-bitcoin-security"><h1>11. Bitcoin Security</h1></a>
+<a class="header" href="#12-blockchain-applications" id="12-blockchain-applications"><h1>12. Blockchain Applications</h1></a>
 
                     </main>
 
@@ -163,6 +174,21 @@
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         
