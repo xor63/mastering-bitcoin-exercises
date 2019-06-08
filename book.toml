@@ -3,3 +3,6 @@ authors = ["mikong"]
 multilingual = false
 src = "src"
 title = "Mastering Bitcoin Exercises"
+
+[output.html]
+additional-css = ["custom.css"]
