@@ -144,6 +144,20 @@
 <a class="header" href="#2-how-bitcoin-works" id="2-how-bitcoin-works"><h1>2. How Bitcoin Works</h1></a>
 <a class="header" href="#3-bitcoin-core-the-reference-implementation" id="3-bitcoin-core-the-reference-implementation"><h1>3. Bitcoin Core: The Reference Implementation</h1></a>
 <a class="header" href="#4-keys-addresses" id="4-keys-addresses"><h1>4. Keys, Addresses</h1></a>
+<a class="header" href="#41-generate-a-private-key" id="41-generate-a-private-key"><h3>4.1 Generate a private key</h3></a>
+<p>Your program should use a cryptographically secure pseudorandom number generator
+(CSPRNG) to generate random bits with sufficient entropy (at least 256 bits) and
+compute its SHA256 hash. Repeat this process in a loop until the value is less
+than the prime p as defined in the secp256k1 standard:</p>
+<pre>
+    p = FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFF FFFFFFFE FFFFFC2F<br>
+      = 2<sup>256</sup> - 2<sup>32</sup> - 2<sup>9</sup> - 2<sup>8</sup> - 2<sup>7</sup> - 2<sup>6</sup> - 2<sup>4</sup> - 1
+</pre>
+<p>Some programming languages may require a bignum library for dealing with very
+large numbers.</p>
+<p><strong>Reading</strong>: You may need to read more about entropy to make sure that your random
+number has sufficient entropy. Different operating systems have different
+sources of entropy.</p>
 <a class="header" href="#5-wallets" id="5-wallets"><h1>5. Wallets</h1></a>
 <a class="header" href="#6-transactions" id="6-transactions"><h1>6. Transactions</h1></a>
 <a class="header" href="#7-advanced-transactions-and-scripting" id="7-advanced-transactions-and-scripting"><h1>7. Advanced Transactions and Scripting</h1></a>
