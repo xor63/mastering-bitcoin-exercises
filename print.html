@@ -27,6 +27,8 @@
 
         <!-- Custom theme stylesheets -->
         
+        <link rel="stylesheet" href="custom.css">
+        
 
         
     </head>
@@ -159,6 +161,29 @@ large numbers.</p>
 number has sufficient entropy. Different operating systems have different
 sources of entropy.</p>
 <a class="header" href="#5-wallets" id="5-wallets"><h1>5. Wallets</h1></a>
+<a class="header" href="#51-generate-mnemonic-words" id="51-generate-mnemonic-words"><h3>5.1 Generate mnemonic words</h3></a>
+<p>Write a program to generate and print mnemonic words from a given random
+sequence of bits.</p>
+<ol>
+<li>Create a random sequence (entropy) of 128/160/192/224/256 bits.</li>
+<li>Compute the SHA256 hash of the random sequence. Take the first
+(entropy-length/32) bits of its hash as the checksum.</li>
+<li>Concatenate the random sequence and the checksum.</li>
+<li>Divide the result into sections of 11 bits.</li>
+<li>Map each 11-bit value to a word from the predefined dictionary of 2048 words.</li>
+<li>Print the mnemonic words in the correct order.</li>
+</ol>
+<p>Table 5-1: Checksum bits and number of mnemonic words depend on length of entropy.</p>
+<table><thead><tr><th align="center"> Entropy (bits) </th><th align="center"> Checksum (bits) </th><th align="center"> Mnemonic length (words) </th></tr></thead><tbody>
+<tr><td align="center"> 128            </td><td align="center"> 4               </td><td align="center"> 12                      </td></tr>
+<tr><td align="center"> 160            </td><td align="center"> 5               </td><td align="center"> 15                      </td></tr>
+<tr><td align="center"> 192            </td><td align="center"> 6               </td><td align="center"> 18                      </td></tr>
+<tr><td align="center"> 224            </td><td align="center"> 7               </td><td align="center"> 21                      </td></tr>
+<tr><td align="center"> 256            </td><td align="center"> 8               </td><td align="center"> 24                      </td></tr>
+</tbody></table>
+<p>Get the dictionary/wordlist from <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP-39</a>.
+There's a section that describes the characteristics of an ideal wordlist, and a
+separate section that links to the actual wordlists.</p>
 <a class="header" href="#6-transactions" id="6-transactions"><h1>6. Transactions</h1></a>
 <a class="header" href="#7-advanced-transactions-and-scripting" id="7-advanced-transactions-and-scripting"><h1>7. Advanced Transactions and Scripting</h1></a>
 <a class="header" href="#8-the-bitcoin-network" id="8-the-bitcoin-network"><h1>8. The Bitcoin Network</h1></a>
