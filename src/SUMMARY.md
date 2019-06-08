@@ -1,5 +1,9 @@
 # Summary
 
+[Mastering Bitcoin Exercises](ch00-title-page.md)
+
+## Exercises
+
 - [Introduction](ch01-introduction.md)
 - [How Bitcoin Works](ch02-how-bitcoin-works.md)
 - [Bitcoin Core: The Reference Implementation](ch03-bitcoin-core-the-reference-implementation.md)
