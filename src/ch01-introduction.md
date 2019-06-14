@@ -10,3 +10,10 @@ verify a text file.
 3. Extract the public key from the private key.
 4. Sign the text file using SHA256 and your private key, and output a signature file.
 5. Verify the signature of the text file using the public key.
+
+### 1.2 A simple QR Code
+
+Use a QR code generator to generate a QR code that simply contains the text
+"hi". Identify the different parts of the QR code such as the positioning
+markings, the format information, the timing pattern, and so on. If you can,
+find where the "h" and "i" is located in the grid of black and white.
