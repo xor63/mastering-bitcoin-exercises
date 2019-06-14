@@ -156,6 +156,21 @@ is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC B
 <p>&quot;Mastering Bitcoin Exercises&quot; is therefore also licensed under a
 <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
 <a class="header" href="#1-introduction" id="1-introduction"><h1>1. Introduction</h1></a>
+<a class="header" href="#11-digital-signature-with-openssl" id="11-digital-signature-with-openssl"><h3>1.1 Digital Signature with OpenSSL</h3></a>
+<p>Use the <code>openssl</code> command-line tool to create an RSA key pair and to sign and
+verify a text file.</p>
+<ol>
+<li>Prepare an arbitrary text file to be signed.</li>
+<li>Generate an RSA private key with key length of 2048 bits.</li>
+<li>Extract the public key from the private key.</li>
+<li>Sign the text file using SHA256 and your private key, and output a signature file.</li>
+<li>Verify the signature of the text file using the public key.</li>
+</ol>
+<a class="header" href="#12-a-simple-qr-code" id="12-a-simple-qr-code"><h3>1.2 A simple QR Code</h3></a>
+<p>Use a QR code generator to generate a QR code that simply contains the text
+&quot;hi&quot;. Identify the different parts of the QR code such as the positioning
+markings, the format information, the timing pattern, and so on. If you can,
+find where the &quot;h&quot; and &quot;i&quot; is located in the grid of black and white.</p>
 <a class="header" href="#2-how-bitcoin-works" id="2-how-bitcoin-works"><h1>2. How Bitcoin Works</h1></a>
 <a class="header" href="#3-bitcoin-core-the-reference-implementation" id="3-bitcoin-core-the-reference-implementation"><h1>3. Bitcoin Core: The Reference Implementation</h1></a>
 <a class="header" href="#4-keys-addresses" id="4-keys-addresses"><h1>4. Keys, Addresses</h1></a>
