@@ -188,6 +188,45 @@ large numbers.</p>
 <p><strong>Reading</strong>: You may need to read more about entropy to make sure that your random
 number has sufficient entropy. Different operating systems have different
 sources of entropy.</p>
+<a class="header" href="#42-confirm-point-is-on-the-elliptic-curve" id="42-confirm-point-is-on-the-elliptic-curve"><h3>4.2 Confirm point is on the elliptic curve</h3></a>
+<p>In the Elliptic Curve Cryptography Explained section of the book, the following
+example point P with coordinates (x, y) on the secp256k1 curve is given:</p>
+<pre><code>P = (55066263022277343669578718895168534326250603453777594175500187360389116729240, 32670510020758816978083085130507043184471273380659243275938904335757337482424)
+</code></pre>
+<p>The book then provides a sample Python code to confirm that the point is on the
+elliptic curve:</p>
+<pre><code class="language-python">p = 115792089237316195423570985008687907853269984665640564039457584007908834671663
+x = 55066263022277343669578718895168534326250603453777594175500187360389116729240
+y = 32670510020758816978083085130507043184471273380659243275938904335757337482424
+(x ** 3 + 7 - y**2) % p
+</code></pre>
+<p>If you're using a different programming language, write a similar program to do
+the same. Make sure that your program can handle very large signed integers. The
+secp256k1 curve is defined by the following function that you should use in your
+program:</p>
+<pre>
+    y<sup>2</sup> mod p = (x<sup>3</sup> + 7) mod p
+</pre>
+<a class="header" href="#43-generate-a-public-key-with-openssl" id="43-generate-a-public-key-with-openssl"><h3>4.3 Generate a public key with OpenSSL</h3></a>
+<p>Use the OpenSSL cryptographic library's <code>EC_POINT_mul()</code> to generate a public
+key. You can use the private key that you have generated in exercise 4.1 or
+alternatively, use the example private key from the book:</p>
+<pre><code>1E99423A4ED27608A15A2616A2B0E9E52CED330AC530EDCC32C8FFC6A526AEDD
+</code></pre>
+<p>Use the library's elliptic curve point multiplication to multiply the private
+key with the generator point G in order to produce the public key K.</p>
+<pre>
+    K = k * G
+</pre>
+<p>Remember that Bitcoin uses a specific elliptic curve and set of constants
+defined in a standard called <a href="https://en.bitcoin.it/wiki/Secp256k1">secp256k1</a>. From the Standards for
+Efficient Cryptography (SEC), the base point G in compressed form is:</p>
+<pre><code>G = 02 79BE667E F9DCBBAC 55A06295 CE870B07 029BFCDB 2DCE28D9 59F2815B 16F81798
+</code></pre>
+<p>and in uncompressed form is:</p>
+<pre><code>G = 04 79BE667E F9DCBBAC 55A06295 CE870B07 029BFCDB 2DCE28D9 59F2815B 16F81798
+       483ADA77 26A3C465 5DA4FBFC 0E1108A8 FD17B448 A6855419 9C47D08F FB10D4B8
+</code></pre>
 <a class="header" href="#5-wallets" id="5-wallets"><h1>5. Wallets</h1></a>
 <a class="header" href="#51-generate-mnemonic-words" id="51-generate-mnemonic-words"><h3>5.1 Generate mnemonic words</h3></a>
 <p>Write a program to generate and print mnemonic words from a given random
