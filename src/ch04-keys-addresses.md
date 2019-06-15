@@ -46,3 +46,37 @@ program:
 <pre>
     y<sup>2</sup> mod p = (x<sup>3</sup> + 7) mod p
 </pre>
+
+### 4.3 Generate a public key with OpenSSL
+
+Use the OpenSSL cryptographic library's `EC_POINT_mul()` to generate a public
+key. You can use the private key that you have generated in exercise 4.1 or
+alternatively, use the example private key from the book:
+
+```
+1E99423A4ED27608A15A2616A2B0E9E52CED330AC530EDCC32C8FFC6A526AEDD
+```
+
+Use the library's elliptic curve point multiplication to multiply the private
+key with the generator point G in order to produce the public key K.
+
+<pre>
+    K = k * G
+</pre>
+
+Remember that Bitcoin uses a specific elliptic curve and set of constants
+defined in a standard called [secp256k1][secp256k1]. From the Standards for
+Efficient Cryptography (SEC), the base point G in compressed form is:
+
+```
+G = 02 79BE667E F9DCBBAC 55A06295 CE870B07 029BFCDB 2DCE28D9 59F2815B 16F81798
+```
+
+and in uncompressed form is:
+
+```
+G = 04 79BE667E F9DCBBAC 55A06295 CE870B07 029BFCDB 2DCE28D9 59F2815B 16F81798
+       483ADA77 26A3C465 5DA4FBFC 0E1108A8 FD17B448 A6855419 9C47D08F FB10D4B8
+```
+
+[secp256k1]: https://en.bitcoin.it/wiki/Secp256k1
