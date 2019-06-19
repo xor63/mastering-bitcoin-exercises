@@ -13,7 +13,8 @@ sequence of bits.
 5. Map each 11-bit value to a word from the predefined dictionary of 2048 words.
 6. Print the mnemonic words in the correct order.
 
-Table 5-1: Checksum bits and number of mnemonic words depend on length of entropy.
+Table 5-1: Checksum bits and number of mnemonic words depend on length of
+entropy.
 
 | Entropy (bits) | Checksum (bits) | Mnemonic length (words) |
 | :---:          | :---:           | :---:                   |
@@ -23,6 +24,8 @@ Table 5-1: Checksum bits and number of mnemonic words depend on length of entrop
 | 224            | 7               | 21                      |
 | 256            | 8               | 24                      |
 
-Get the dictionary/wordlist from [BIP-39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).
-There's a section that describes the characteristics of an ideal wordlist, and a
-separate section that links to the actual wordlists.
+Get the dictionary/wordlist from [BIP-39][bip39]. There's a section that
+describes the characteristics of an ideal wordlist, and a separate section that
+links to the actual wordlists.
+
+[bip39]: https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki

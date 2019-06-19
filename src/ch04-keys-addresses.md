@@ -15,8 +15,8 @@ than the prime p as defined in the secp256k1 standard:
 Some programming languages may require a bignum library for dealing with very
 large numbers.
 
-__Reading__: You may need to read more about entropy to make sure that your random
-number has sufficient entropy. Different operating systems have different
+__Reading__: You may need to read more about entropy to make sure that your
+random number has sufficient entropy. Different operating systems have different
 sources of entropy.
 
 ### 4.2 Confirm point is on the elliptic curve
