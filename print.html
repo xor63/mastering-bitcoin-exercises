@@ -156,17 +156,18 @@ is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC B
 <p>&quot;Mastering Bitcoin Exercises&quot; is therefore also licensed under a
 <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
 <a class="header" href="#1-introduction" id="1-introduction"><h1>1. Introduction</h1></a>
-<a class="header" href="#11-digital-signature-with-openssl" id="11-digital-signature-with-openssl"><h3>1.1 Digital Signature with OpenSSL</h3></a>
+<a class="header" href="#11-digital-signature-with-openssl" id="11-digital-signature-with-openssl"><h3>1.1 Digital signature with OpenSSL</h3></a>
 <p>Use the <code>openssl</code> command-line tool to create an RSA key pair and to sign and
 verify a text file.</p>
 <ol>
 <li>Prepare an arbitrary text file to be signed.</li>
 <li>Generate an RSA private key with key length of 2048 bits.</li>
 <li>Extract the public key from the private key.</li>
-<li>Sign the text file using SHA256 and your private key, and output a signature file.</li>
+<li>Sign the text file using SHA256 and your private key, and output a signature
+file.</li>
 <li>Verify the signature of the text file using the public key.</li>
 </ol>
-<a class="header" href="#12-a-simple-qr-code" id="12-a-simple-qr-code"><h3>1.2 A simple QR Code</h3></a>
+<a class="header" href="#12-a-simple-qr-code" id="12-a-simple-qr-code"><h3>1.2 A simple QR code</h3></a>
 <p>Use a QR code generator to generate a QR code that simply contains the text
 &quot;hi&quot;. Identify the different parts of the QR code such as the positioning
 markings, the format information, the timing pattern, and so on. If you can,
@@ -196,8 +197,8 @@ than the prime p as defined in the secp256k1 standard:</p>
 </pre>
 <p>Some programming languages may require a bignum library for dealing with very
 large numbers.</p>
-<p><strong>Reading</strong>: You may need to read more about entropy to make sure that your random
-number has sufficient entropy. Different operating systems have different
+<p><strong>Reading</strong>: You may need to read more about entropy to make sure that your
+random number has sufficient entropy. Different operating systems have different
 sources of entropy.</p>
 <a class="header" href="#42-confirm-point-is-on-the-elliptic-curve" id="42-confirm-point-is-on-the-elliptic-curve"><h3>4.2 Confirm point is on the elliptic curve</h3></a>
 <p>In the Elliptic Curve Cryptography Explained section of the book, the following
@@ -251,7 +252,8 @@ sequence of bits.</p>
 <li>Map each 11-bit value to a word from the predefined dictionary of 2048 words.</li>
 <li>Print the mnemonic words in the correct order.</li>
 </ol>
-<p>Table 5-1: Checksum bits and number of mnemonic words depend on length of entropy.</p>
+<p>Table 5-1: Checksum bits and number of mnemonic words depend on length of
+entropy.</p>
 <table><thead><tr><th align="center"> Entropy (bits) </th><th align="center"> Checksum (bits) </th><th align="center"> Mnemonic length (words) </th></tr></thead><tbody>
 <tr><td align="center"> 128            </td><td align="center"> 4               </td><td align="center"> 12                      </td></tr>
 <tr><td align="center"> 160            </td><td align="center"> 5               </td><td align="center"> 15                      </td></tr>
@@ -259,9 +261,9 @@ sequence of bits.</p>
 <tr><td align="center"> 224            </td><td align="center"> 7               </td><td align="center"> 21                      </td></tr>
 <tr><td align="center"> 256            </td><td align="center"> 8               </td><td align="center"> 24                      </td></tr>
 </tbody></table>
-<p>Get the dictionary/wordlist from <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP-39</a>.
-There's a section that describes the characteristics of an ideal wordlist, and a
-separate section that links to the actual wordlists.</p>
+<p>Get the dictionary/wordlist from <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP-39</a>. There's a section that
+describes the characteristics of an ideal wordlist, and a separate section that
+links to the actual wordlists.</p>
 <a class="header" href="#6-transactions" id="6-transactions"><h1>6. Transactions</h1></a>
 <a class="header" href="#7-advanced-transactions-and-scripting" id="7-advanced-transactions-and-scripting"><h1>7. Advanced Transactions and Scripting</h1></a>
 <a class="header" href="#8-the-bitcoin-network" id="8-the-bitcoin-network"><h1>8. The Bitcoin Network</h1></a>
