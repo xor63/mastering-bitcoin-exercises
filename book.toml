@@ -5,4 +5,5 @@ src = "src"
 title = "Mastering Bitcoin Exercises"
 
 [output.html]
+google-analytics = "UA-142494091-1"
 additional-css = ["custom.css"]
