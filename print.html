@@ -250,6 +250,14 @@ Efficient Cryptography (SEC), the base point G in compressed form is:</p>
 <pre><code>G = 04 79BE667E F9DCBBAC 55A06295 CE870B07 029BFCDB 2DCE28D9 59F2815B 16F81798
        483ADA77 26A3C465 5DA4FBFC 0E1108A8 FD17B448 A6855419 9C47D08F FB10D4B8
 </code></pre>
+<a class="header" href="#44-convert-a-public-key-into-a-bitcoin-address" id="44-convert-a-public-key-into-a-bitcoin-address"><h3>4.4 Convert a public key into a bitcoin address</h3></a>
+<p>Using the public key generated from the previous exercise, compute its SHA256
+hash and then compute the RIPEMD160 hash of the result to produce a 160-bit
+bitcoin address.</p>
+<pre>
+    A = RIPEMD160(SHA256(K))
+</pre>
+<p>This double-hash function is called HASH160.</p>
 <a class="header" href="#5-wallets" id="5-wallets"><h1>5. Wallets</h1></a>
 <a class="header" href="#51-generate-mnemonic-words" id="51-generate-mnemonic-words"><h3>5.1 Generate mnemonic words</h3></a>
 <p>Write a program to generate and print mnemonic words from a given random
@@ -275,6 +283,21 @@ entropy.</p>
 <p>Get the dictionary/wordlist from <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP-39</a>. There's a section that
 describes the characteristics of an ideal wordlist, and a separate section that
 links to the actual wordlists.</p>
+<a class="header" href="#52-pbkdf2" id="52-pbkdf2"><h3>5.2 PBKDF2</h3></a>
+<p>Password-Based Key Derivation Function 2 (<a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a>) is a key derivation
+function to make brute force attacks more difficult with
+<a href="https://en.wikipedia.org/wiki/Key_stretching">key stretching</a>.</p>
+<pre>
+    DK = PBKDF2(PRF, Password, Salt, c, dkLen)
+</pre>
+<p>Given the following parameters, use a PBKDF2 library to derive a key:</p>
+<ul>
+<li><code>c</code> (number of rounds): 4096</li>
+<li><code>PRF</code> (pseudorandom function): HMAC-SHA256</li>
+<li><code>dkLen</code> (derived key length): 256</li>
+</ul>
+<p>The PBKDF2 key derivation function takes two more parameters: a password, and a
+salt. For this exercise, you can choose arbitrary values for these two.</p>
 <a class="header" href="#6-transactions" id="6-transactions"><h1>6. Transactions</h1></a>
 <a class="header" href="#7-advanced-transactions-and-scripting" id="7-advanced-transactions-and-scripting"><h1>7. Advanced Transactions and Scripting</h1></a>
 <a class="header" href="#8-the-bitcoin-network" id="8-the-bitcoin-network"><h1>8. The Bitcoin Network</h1></a>

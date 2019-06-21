@@ -167,6 +167,21 @@ entropy.</p>
 <p>Get the dictionary/wordlist from <a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP-39</a>. There's a section that
 describes the characteristics of an ideal wordlist, and a separate section that
 links to the actual wordlists.</p>
+<a class="header" href="#52-pbkdf2" id="52-pbkdf2"><h3>5.2 PBKDF2</h3></a>
+<p>Password-Based Key Derivation Function 2 (<a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a>) is a key derivation
+function to make brute force attacks more difficult with
+<a href="https://en.wikipedia.org/wiki/Key_stretching">key stretching</a>.</p>
+<pre>
+    DK = PBKDF2(PRF, Password, Salt, c, dkLen)
+</pre>
+<p>Given the following parameters, use a PBKDF2 library to derive a key:</p>
+<ul>
+<li><code>c</code> (number of rounds): 4096</li>
+<li><code>PRF</code> (pseudorandom function): HMAC-SHA256</li>
+<li><code>dkLen</code> (derived key length): 256</li>
+</ul>
+<p>The PBKDF2 key derivation function takes two more parameters: a password, and a
+salt. For this exercise, you can choose arbitrary values for these two.</p>
 
                     </main>
 
