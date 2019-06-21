@@ -79,4 +79,16 @@ G = 04 79BE667E F9DCBBAC 55A06295 CE870B07 029BFCDB 2DCE28D9 59F2815B 16F81798
        483ADA77 26A3C465 5DA4FBFC 0E1108A8 FD17B448 A6855419 9C47D08F FB10D4B8
 ```
 
+### 4.4 Convert a public key into a bitcoin address
+
+Using the public key generated from the previous exercise, compute its SHA256
+hash and then compute the RIPEMD160 hash of the result to produce a 160-bit
+bitcoin address.
+
+<pre>
+    A = RIPEMD160(SHA256(K))
+</pre>
+
+This double-hash function is called HASH160.
+
 [secp256k1]: https://en.bitcoin.it/wiki/Secp256k1
