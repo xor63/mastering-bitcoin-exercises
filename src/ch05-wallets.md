@@ -28,4 +28,25 @@ Get the dictionary/wordlist from [BIP-39][bip39]. There's a section that
 describes the characteristics of an ideal wordlist, and a separate section that
 links to the actual wordlists.
 
+### 5.2 PBKDF2
+
+Password-Based Key Derivation Function 2 ([PBKDF2]) is a key derivation
+function to make brute force attacks more difficult with
+[key stretching][key_stretching].
+
+<pre>
+    DK = PBKDF2(PRF, Password, Salt, c, dkLen)
+</pre>
+
+Given the following parameters, use a PBKDF2 library to derive a key:
+
+* `c` (number of rounds): 4096
+* `PRF` (pseudorandom function): HMAC-SHA256
+* `dkLen` (derived key length): 256
+
+The PBKDF2 key derivation function takes two more parameters: a password, and a
+salt. For this exercise, you can choose arbitrary values for these two.
+
 [bip39]: https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki
+[pbkdf2]: https://en.wikipedia.org/wiki/PBKDF2
+[key_stretching]: https://en.wikipedia.org/wiki/Key_stretching
