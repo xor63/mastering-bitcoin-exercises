@@ -32,3 +32,10 @@ Check that you can see the same transaction inputs and outputs as in the book.
 In the book, we saw that Alice's transaction was included in block 277316. Using
 a client library, obtain this block and find Alice's transaction in the list of
 transactions that the block contains.
+
+### 3.3 Execute `getmempoolinfo`
+
+The book mentioned `getmempoolinfo` as one of the more important RPC commands.
+Using the Bitcoin Core client or an alternative client library with a similar
+command, execute this command and get the details of the memory pool such as the
+minimum fee rate for a transaction to be accepted.
