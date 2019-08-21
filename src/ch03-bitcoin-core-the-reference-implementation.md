@@ -12,7 +12,7 @@ We can work on exercises that use any of these to expand on this chapter. With
 your programming language of choice, select the software in the list that you
 would like to explore and see if you can do any of the exercises below.
 
-### 3.1 Decode Raw Transaction
+### 3.1 Decode a raw transaction
 
 Using a client library, decode Alice's coffee transaction with the following
 transaction ID:
@@ -26,3 +26,9 @@ transaction that you will then have to decode, or you may directly get a
 human-readable format of the transaction.
 
 Check that you can see the same transaction inputs and outputs as in the book.
+
+### 3.2 Find Alice's transaction in the block
+
+In the book, we saw that Alice's transaction was included in block 277316. Using
+a client library, obtain this block and find Alice's transaction in the list of
+transactions that the block contains.
