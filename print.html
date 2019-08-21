@@ -196,6 +196,25 @@ three consecutive zeros.</p>
 }
 </code></pre>
 <a class="header" href="#3-bitcoin-core-the-reference-implementation" id="3-bitcoin-core-the-reference-implementation"><h1>3. Bitcoin Core: The Reference Implementation</h1></a>
+<p>Chapter 3 of the book Mastering Bitcoin 2nd Edition is a highly technical
+chapter for setting up a development environment. It walks you through compiling
+Bitcoin Core and configuring/running your own node. If you follow the steps and
+explore the help documentation as described in the chapter, there's more than
+enough exercises to work on.</p>
+<p>The last section of that chapter is Alternative Clients, Libraries and Toolkits.
+It lists some libraries, clients and toolkits grouped by programming language.
+We can work on exercises that use any of these to expand on this chapter. With
+your programming language of choice, select the software in the list that you
+would like to explore and see if you can do any of the exercises below.</p>
+<a class="header" href="#31-decode-raw-transaction" id="31-decode-raw-transaction"><h3>3.1 Decode Raw Transaction</h3></a>
+<p>Using a client library, decode Alice's coffee transaction with the following
+transaction ID:</p>
+<pre><code>0627052b6f28912f2703066a912ea577f2ce4da4caa5a5fbd8a57286c345c2f2
+</code></pre>
+<p>Depending on the library, you may have to initially obtain a serialized
+transaction that you will then have to decode, or you may directly get a
+human-readable format of the transaction.</p>
+<p>Check that you can see the same transaction inputs and outputs as in the book.</p>
 <a class="header" href="#4-keys-addresses" id="4-keys-addresses"><h1>4. Keys, Addresses</h1></a>
 <a class="header" href="#41-generate-a-private-key" id="41-generate-a-private-key"><h3>4.1 Generate a private key</h3></a>
 <p>Your program should use a cryptographically secure pseudorandom number generator
