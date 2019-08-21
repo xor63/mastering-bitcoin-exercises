@@ -11,3 +11,18 @@ It lists some libraries, clients and toolkits grouped by programming language.
 We can work on exercises that use any of these to expand on this chapter. With
 your programming language of choice, select the software in the list that you
 would like to explore and see if you can do any of the exercises below.
+
+### 3.1 Decode Raw Transaction
+
+Using a client library, decode Alice's coffee transaction with the following
+transaction ID:
+
+```
+0627052b6f28912f2703066a912ea577f2ce4da4caa5a5fbd8a57286c345c2f2
+```
+
+Depending on the library, you may have to initially obtain a serialized
+transaction that you will then have to decode, or you may directly get a
+human-readable format of the transaction.
+
+Check that you can see the same transaction inputs and outputs as in the book.
