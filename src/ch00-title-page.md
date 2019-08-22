@@ -19,6 +19,12 @@ is licensed under [CC BY-SA 4.0][cc-by-sa].
 "Mastering Bitcoin Exercises" is therefore also licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
+## Source
+
+The source files from which this book is generated can be found on
+[GitHub][source].
+
 [btc-book]: https://amzn.to/2xcdsY9
 [aantonop]: https://antonopoulos.com/
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
+[source]: https://github.com/xor63/mastering-bitcoin-exercises/tree/master/src
