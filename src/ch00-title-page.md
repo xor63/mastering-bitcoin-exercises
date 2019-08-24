@@ -1,5 +1,7 @@
 # Mastering Bitcoin Exercises
 
+*by Mikong Galero*
+
 Welcome to the Mastering Bitcoin Exercises workbook! This book provides
 supplementary exercises to the book [Mastering Bitcoin 2nd Edition][btc-book] by
 Andreas M. Antonopoulos.
